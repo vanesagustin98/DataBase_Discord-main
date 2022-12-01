@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, footer{
+    background-color: rgb(213, 221, 246);
+    padding: 20px;
+    text-align: center;
+}
+
+header{
+    padding-bottom: 0px;
+}
+
+header a{
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #180f56;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header a:hover{
+    background-color: rgb(160, 174, 212);
+    color: aliceblue;
+}
+
+.div_redes{
+    background-color: #a0aed4;
+    display: inline-block;
+    width: 4em;
+    position: absolute;
+    position: fixed;
+   right: 0px;
+   text-align: center;
+   border-bottom-left-radius: 10px;
+   border-top-left-radius: 10px;
+}
+
+.div_redes a{
+    display: block;
+    padding: 10px;
+    
+}
+
+.icon{
+    width: 50px;
+}
+
+.formulario{
+    background-color: rgb(213, 221, 246);
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 50px;
+    width: 600px;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.from_text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    align-content: center;
+}
+
+.from_text input{
+    width: 90%;
+    height: 30px;
+    border-radius: 8px;
+    border-width: 0ch;
+    margin:5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 20px auto;
+}
+
+form div{
+    padding-left: 30px;
+}
+
+h3{
+    padding: 10px 20px;
+    border-bottom: 2px solid #7281a8;
+    margin: 10px auto;
+    color: #7281a8;
+}
+
+.container form{
+    display: inline-block;
+    width: 100%;
+}
+
+
+.boton{
+    display: inline-block;
+    background-color: #a0aed4;
+    color: aliceblue;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.boton:hover{
+    scale: 1.05;
+}
+
+h4{
+    margin-bottom:20px;
+    color: #7281a8;
+}
+
+
+
+::placeholder{
+    padding-left: 20px;
+}
