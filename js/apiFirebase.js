@@ -65,19 +65,20 @@ const actualizarDato = async(user, documentID) => {
 
 
 
-// function enviarUsuario(){
-//   var Nombre = document.getElementById("name").value;
-//   var Apellido = document.getElementById("apellido").value;
-//   var Cedula = document.getElementById("cedula").value;
-//   var Correo = document.getElementById("correo").value;
-//   var Contraseña = document.getElementById("contraseña").value;
+function enviarUsuario(){
+  var Nombre = document.getElementById("name").value;
+  var Apellido = document.getElementById("apellido").value;
+  var Cedula = document.getElementById("cedula").value;
+  var Correo = document.getElementById("correo").value;
+  var Contraseña = document.getElementById("contraseña").value;
 
-//   const user = {
-//       Cedula, Nombre, Apellido, Correo, Contraseña
-//   }
+  const user = {
+      Cedula, Nombre, Apellido, Correo, Contraseña
+  }
 
-//   subirDatos(user);
-// }
+  subirDatos(user);
+  alert("Usuario Registrado")
+}
 
 // function modificarUsuario(documentID){
 //   var Nombre = document.getElementById("name").value;
@@ -93,10 +94,10 @@ const actualizarDato = async(user, documentID) => {
 //   actualizarDato(user, documentID);
 // }
 
-// document.getElementById("añadir").addEventListener("click", (e)=>{
-//   e.preventDefault()
-//   enviarUsuario()
-// })
+document.getElementById("añadir").addEventListener("click", (e)=>{
+  e.preventDefault()
+  enviarUsuario()
+})
 
 // document.getElementById("eliminar").addEventListener("click", (e)=>{
 //   e.preventDefault()

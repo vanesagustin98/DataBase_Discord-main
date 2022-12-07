@@ -36,10 +36,10 @@ header a:hover{
     width: 4em;
     position: absolute;
     position: fixed;
-    right: 0px;
-    text-align: center;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+   right: 0px;
+   text-align: center;
+   border-bottom-left-radius: 10px;
+   border-top-left-radius: 10px;
 }
 
 .div_redes a{
@@ -116,22 +116,7 @@ h3{
     box-sizing: border-box;
     padding: 8px;
     text-decoration: none;
-}
-
-.btn{
-    display: inline-block;
-    background-color: #a0aed4;
-    color: aliceblue;
-    width: 200px;
-    text-align: center;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 8px;
-    text-decoration: none;
-}
-
-.btn:hover{
-    scale: 1.05;
+    width: 20%;
 }
 
 .boton:hover{

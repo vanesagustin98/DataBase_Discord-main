@@ -13,5 +13,7 @@ function enviarUsuario(){
 
     var api = require("./apiFirebase.js")
     api.subirDatos(user)   
+
+    alert("usuario ingresado")
 }
 
