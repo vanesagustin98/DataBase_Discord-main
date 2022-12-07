@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
-    
-    <title>Inicio</title>
-  </head>
 <!-- hola -->
 <!-- hola2 -->
-  <body>
+<body>
     <header>
       <div>
         <a href="index.html">Formulario</a>
@@ -22,29 +12,20 @@
         <h4>
           Completa el formulario con tus datos
         </h4>
-
-        <form onsubmit="retirar(event)"><label>Digite la cantidad a retirar</label>
-          <input type="number" name="txtn1" id="txtn1" required min="500000" max="1200000">
-  
-          <input type="submit" value="Retirar" > 
-      </form>
-        <form onsubmit="enviarUsuario(event)" class="from_text" action="#" method="post">
+        <form class="from_text" action="#" method="post">
           <input type="text" placeholder="Ingrese su nombre" id="name" required>
           <input type="text" placeholder="Ingrese su apellido" id="apellido" required>
           <input type="text" placeholder="Ingrese su cedula" id="cedula" required>
           <input type="text" placeholder="Ingrese su correo" id="correo" required min="1">
           <input type="password" placeholder="Ingrese su contraseña" id="contraseña"required>
-          <input class="btn" type="submit" value="Retirar" >
-        
         </form>
 
         <br>
         <a href="" class="boton" id="añadir">Añadir</a>
-        <input class="btn" type="submit" value="Retirar" >
         <br>
-        <a href="" class="boton" id="modificar">Modificar</a>
+        <a href="modificar.html" class="boton" id="modificar">Modificar</a>
         <br>
-        <a href="" class="boton" id="eliminar">Eliminar</a>
+        <a href="eliminar.html" class="boton" id="eliminar">Eliminar</a>
         <br>
       </section>
     </main>
