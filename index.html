@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    
     <title>Inicio</title>
   </head>
 <!-- hola -->
@@ -22,18 +23,22 @@
           Completa el formulario con tus datos
         </h4>
         <form class="from_text" action="#" method="post">
-          <input type="text" placeholder="Ingrese su nombre" />
-          <input type="text" placeholder="Ingrese su apellido" />
-          <input type="text" placeholder="Ingrese su cedula" />
+          <input type="text" placeholder="Ingrese su nombre" id="name">
+          <input type="text" placeholder="Ingrese su apellido" id="apellido">
+          <input type="text" placeholder="Ingrese su cedula" id="cedula">
+          <input type="text" placeholder="Ingrese su correo" id="correo">
+          <input type="password" placeholder="Ingrese su contraseña" id="contraseña">
         </form>
 
-        
-        <a href="" class="boton">Añadir</a>
-        <a href="" class="boton">Modificar</a>
-        <a href="" class="boton">Eliminar</a>
+        <br>
+        <a href="" class="boton" id="añadir">Añadir</a>
+        <br>
+        <a href="" class="boton" id="modificar">Modificar</a>
+        <br>
+        <a href="" class="boton" id="eliminar">Eliminar</a>
+        <br>
       </section>
     </main>
-
-    <footer><p>Derechos reservados por @Discord_proyect</p></footer>
+    <script src="js/apiFirebase.js" type="module"></script>
   </body>
 </html>
