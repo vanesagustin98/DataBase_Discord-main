@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import { getFirestore, collection, addDoc, doc, deleteDoc, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, doc, deleteDoc, getDocs, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -33,14 +33,14 @@ const obtenerDatos = async() =>{
   var lista = [];
   const querySnapshot = await getDocs(collection(db, "users"));
   querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
+    //console.log(doc.id, " => ", doc.data());
 
     var id = doc.id;
-    var nombre = doc.Nombre;
-    var apellido = doc.Apellido;
-    var cedula = doc.Cedula;
-    var correo = doc.Correo;
-    var password = doc.Contraseña;
+    var nombre = doc.data().Nombre;
+    var apellido = doc.data().Apellido;
+    var cedula = doc.data().Cedula;
+    var correo = doc.data().Correo;
+    var password = doc.data().Contraseña;
 
     var user = {
       id, nombre, apellido, cedula, correo, password
@@ -50,6 +50,11 @@ const obtenerDatos = async() =>{
   });
 
   return lista;
+}
+
+const obtenerUser = async(id) =>{
+  const querySnapshot = await getDoc(doc(db, "users", id));
+  return querySnapshot.data();
 }
 
 const eliminarDato = async(documentID) => {
@@ -99,6 +104,29 @@ document.getElementById("añadir").addEventListener("click", (e)=>{
   enviarUsuario()
 })
 
+function showList(result) {
+  result.forEach(user => {
+    document.getElementById("lista").innerHTML += "<option value='" + user.id + "'>" + user.nombre + "</option>"
+  });
+}
+
+function showUser(result) {
+  console.log(result);
+  document.getElementById("name").value = result.Nombre;
+  document.getElementById("apellido").value = result.Apellido;
+  document.getElementById("cedula").value = result.Cedula;
+  document.getElementById("correo").value = result.Correo;
+  document.getElementById("contraseña").value = result.Contraseña;
+}
+
+const promise = obtenerDatos();
+promise.then(showList);
+
+document.getElementById("lista").addEventListener("click", (e)=>{
+  e.preventDefault();
+  const promise2 = obtenerUser(e.target.value);
+  promise2.then(showUser);
+})
 // document.getElementById("eliminar").addEventListener("click", (e)=>{
 //   e.preventDefault()
 //   eliminarDato("Fz9H1KoQisViCqHxLDux")
