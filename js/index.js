@@ -1,19 +1,22 @@
-import "./apiFirebase.js";
+import { subirDatos } from "./apiFirebase.js";
 
 function enviarUsuario(){
-    var nombre = document.getElementById("name").value;
-    var apellido = document.getElementById("apellido").value;
-    var cedula = document.getElementById("cedula").value;
-    var correo = document.getElementById("correo").value;
-    var contraseña = document.getElementById("contraseña").value;
-
+    var Nombre = document.getElementById("name").value;
+    var Apellido = document.getElementById("apellido").value;
+    var Cedula = document.getElementById("cedula").value;
+    var Correo = document.getElementById("correo").value;
+    var Contraseña = document.getElementById("contraseña").value;
+  
     const user = {
-        cedula, nombre, apellido, correo, contraseña
+        Cedula, Nombre, Apellido, Correo, Contraseña
     }
-
-    var api = require("./apiFirebase.js")
-    api.subirDatos(user)   
-
-    alert("usuario ingresado")
+  
+    subirDatos(user);
+    alert("Usuario Registrado")
 }
+
+document.getElementById("añadir").addEventListener("click", (e)=>{
+    e.preventDefault();
+    enviarUsuario();
+})
 
